@@ -1,3 +1,5 @@
+#https://askubuntu.com/questions/29284/how-do-i-mount-shared-folders-in-ubuntu-using-vmware-tools/1051620#1051620?newreg=bb92dd2a388343ec88df176013c6e1cd
+
 #Most other answers are outdated. For Ubuntu 18.04 (or recent Debian distros), try:
 
 sudo vmhgfs-fuse .host:/ /mnt/hgfs/ -o allow_other -o uid=1000
@@ -27,3 +29,7 @@ sudo apt-get install open-vm-tools open-vm-tools-desktop
 
 sudo apt-get install build-essential module-assistant \
   linux-headers-virtual linux-image-virtual && dpkg-reconfigure open-vm-tools
+  
+ 
+ #This also gives you quick access to the folder from your Ubuntu desktop. Enter this into terminal:
+ ln -s /mnt/hgfs/shared-directory ~/Desktop/Name-of-the-folder  
